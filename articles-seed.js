@@ -76,7 +76,7 @@ async function seed () {
       validator: {
         $jsonSchema: {
           bsonType: "object",
-          required: [ "title", "body"],
+          required: [ "title", "body", "user_id", "category_id", "comments" ],
           properties: {
             title: {
               bsonType: "string",
@@ -196,3 +196,4 @@ async function seed () {
 }
 
 seed();
+
