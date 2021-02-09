@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+{{#if error}}
+<p>{{error.message}}</p>
+{{/if}}
+{{#if articles.length}}
+<table class="table">
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Category</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each articles}}
+    <tr>
+      <td>{{this.author}}</td>
+      <td>{{this.category}}</td>
+      <td>{{truncate this.title 10}}...</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<p>There are no articles.</p>
+{{/if}}
